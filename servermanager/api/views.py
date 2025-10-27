@@ -11,6 +11,7 @@ class ServerViewSet(viewsets.ModelViewSet):
     serializer_class = ServerSerializer
     renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
 
+# filtering
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ["is_active"]
     search_fields = ['name','location']
